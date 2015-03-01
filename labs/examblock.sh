@@ -11,9 +11,14 @@ on()
     iptables -P OUTPUT DROP
     iptables -P FORWARD DROP
 
-    iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-    iptables -A OUTPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
-    iptables -A OUTPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
+    #iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+    #iptables -A OUTPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
+    #iptables -A OUTPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
+
+    iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p tcp -d 147.52.65.68 --dport 80 -j ACCEPT
+    iptables -A INPUT  -m state --state ESTABLISHED     -p tcp -s 147.52.65.68 --sport 80 -j ACCEPT
+    iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p tcp -d 147.52.65.68 --dport 443 -j ACCEPT
+    iptables -A INPUT  -m state --state ESTABLISHED     -p tcp -s 147.52.65.68 --sport 443 -j ACCEPT
 
     #ssh:
     # we want to allow only incoming ssh from specific hosts
