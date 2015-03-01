@@ -58,20 +58,31 @@ on()
     init
 
     p_filter DROP
-    p_mangle DROP
-    p_nat    DROP
+    #p_mangle DROP
+    #p_nat    DROP
 
     # Allow all traffic with localhost
     iptables -A INPUT  -i lo -j ACCEPT
     iptables -A OUTPUT -o lo -j ACCEPT
 
+    iptables -A INPUT -s 147.52.65.68 -j ACCEPT
+    iptables -A INPUT -d 147.52.65.68 -j ACCEPT
+    iptables -A INPUT -s 147.52.67.72 -j ACCEPT
+    iptables -A INPUT -d 147.52.67.72 -j ACCEPT
 
+    
     # Allow outbound http/https to fourier.math.uoc.gr
-    iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-    iptables -A OUTPUT -m state --state NEW,ESTABLISED,RELATED -p tcp -d 147.52.65.68 --dport 80,443 -j ACCEPT
-    iptables -A INPUT  -m state --state ESTABLISED,RELATED -p tcp -s 147.52.65.68 --sport 80,443 -j ACCEPT
+    #iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+#    iptables -A OUTPUT -m state --state NEW,ESTABLISHED,RELATED -p tcp -d 147.52.65.68 --dport 80 -j ACCEPT
+#    iptables -A INPUT  -m state --state ESTABLISHED,RELATED     -p tcp --sport 80 -j ACCEPT
+#
+#    iptables -A OUTPUT -m state --state NEW,ESTABLISHED,RELATED -p tcp -d 147.52.65.68 --dport 443 -j ACCEPT
+#    iptables -A INPUT  -m state --state ESTABLISHED,RELATED     -p tcp -s 147.52.65.68 --sport 443 -j ACCEPT
 
-    iptables -A OUTPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
+    # 5. Allow incoming SSH only from a sepcific network
+#iptables -A INPUT -p tcp -s 192.168.200.0/24 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+#iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+
 
     #ssh:
     # we want to allow only incoming ssh from specific hosts
@@ -79,15 +90,21 @@ on()
     #iptables -A OUTPUT -d 147.52.67.72 -m state --state NEW,ESTABLISHED -p tcp --dport 22 -j ACCEPT
     #iptables -A INPUT -s 147.52.67.72 -m state --state NEW,ESTABLISHED -p tcp --dport 22 -j ACCEPT
 
-    iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p tcp -d 147.52.67.72 --dport 22 -j ACCEPT
-    iptables -A INPUT  -m state --state ESTABLISHED     -p tcp -s 147.52.67.72 --sport 22 -j ACCEPT
+    #iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p tcp -d 147.52.67.72 --dport 22 -j ACCEPT
+    #iptables -A INPUT  -m state --state ESTABLISHED     -p tcp -s 147.52.67.72 --sport 22 -j ACCEPT
 
 
     # Allow outbound DNS
-    iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p udp --dport 53 -j ACCEPT
-    iptables -A INPUT  -m state --state ESTABLISHED      -p udp --sport 53 -j ACCEPT
-    iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p tcp --dport 53 -j ACCEPT
-    iptables -A INPUT  -m state --state ESTABLISHED      -p tcp --sport 53 -j ACCEPT
+#    iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p udp --dport 53 -j ACCEPT
+#    iptables -A INPUT  -m state --state ESTABLISHED      -p udp --sport 53 -j ACCEPT
+#    iptables -A OUTPUT -m state --state NEW,ESTABLISHED -p tcp --dport 53 -j ACCEPT
+#    iptables -A INPUT  -m state --state ESTABLISHED      -p tcp --sport 53 -j ACCEPT
+
+    iptables -A INPUT -p udp --dport 53  -j ACCEPT
+    iptables -A INPUT -p tcp --dport 53  -j ACCEPT
+    iptables -A OUTPUT -p udp --sport 53 -j ACCEPT
+    iptables -A OUTPUT -p tcp --sport 53 -j ACCEPT
+
 
 }
 
