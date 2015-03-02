@@ -30,8 +30,6 @@ case $1 in
         ;;
 
     off)
-        mount -a
-
         iptables -P INPUT ACCEPT
         iptables -P OUTPUT ACCEPT
         iptables -P FORWARD ACCEPT
@@ -39,6 +37,8 @@ case $1 in
         iptables -F INPUT
         iptables -F OUTPUT
         iptables -F FORWARD
+
+        mount -a
         ;;
     
     status)
