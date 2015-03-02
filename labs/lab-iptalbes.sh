@@ -5,6 +5,9 @@ RETVAL=1
 case $1 in
 
     on)
+        umount /home/math/ugrads
+        umount /home/tem/ugrads
+
         iptables -P INPUT DROP
         iptables -P OUTPUT DROP
         iptables -P FORWARD DROP
@@ -27,6 +30,8 @@ case $1 in
         ;;
 
     off)
+        mount -a
+
         iptables -P INPUT ACCEPT
         iptables -P OUTPUT ACCEPT
         iptables -P FORWARD ACCEPT
