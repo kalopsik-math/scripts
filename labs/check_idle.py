@@ -12,7 +12,6 @@
 #       xautolock must be installe
 #       my_notifier.py must be in /usr/local/bin
 
-import sys
 
 try:
     import subprocess
@@ -27,8 +26,9 @@ try:
     locker   = "/sbin/poweroff"
 
     # Program to run $margin seconds before timeout
-    # notifier = "/usr/local/bin/ny_notifier.py"
-    notifier = "/home/kalopsik/PycharmProjects/scripts/labs/my_notifier.py"
+    notifier = "/usr/local/bin/ny_notifier.py"
+    import os
+    if os.path.isfile(notifier):  print("lala")
 
     logfile = "/var/log/check_idle.log"
     log = open(logfile,"a")
@@ -61,8 +61,10 @@ try:
     log.write("%s||%s" % (stdout,stderr))
     log.close()
     raise()
+
 except:
 
+    import sys
     import smtplib
     from email.mime.text import MIMEText
 
