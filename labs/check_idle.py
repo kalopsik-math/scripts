@@ -72,6 +72,6 @@ except:
     msg['From'] = "check_idle@math.uoc.gr"
     msg['To'] = "sysadmin@math.uoc.gr"
 
-    s = smtplib.SMTP('mta.mail.uoc.gr')
+    s = smtplib.SMTP('mta.uoc.gr')
     s.sendmail("sysadmin@math.uoc.gr", "sysadmin@math.uoc.gr", msg.as_string())
     s.quit()
