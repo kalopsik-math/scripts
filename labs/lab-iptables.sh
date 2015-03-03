@@ -10,42 +10,47 @@ case $1 in
         umount /home/math/ugrads
         umount /home/tem/ugrads
 
+        # change ldap.conf in
         rm /etc/ldap.conf
         ln -s /etc/ldap-block.conf /etc/ldap.conf
         pam-auth-update --force
         /etc/init.d/ncsd restart
         /etc/init.d/nslcd restart
 
+        # Default policy for all traffic must be DROP
         iptables -P INPUT DROP
         iptables -P OUTPUT DROP
         iptables -P FORWARD DROP
-#        iptables -P INPUT ACCEPT
-#        iptables -P OUTPUT ACCEPT
-#        iptables -P FORWARD ACCEPT
 
-
+        # Clear all rules (now everything must be blocked)
         iptables -F INPUT
         iptables -F OUTPUT
         iptables -F FORWARD
-    
+
+        # We should allow local interface
         iptables -A INPUT  -i lo -j ACCEPT
         iptables -A OUTPUT -o lo -j ACCEPT
 
-#        iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
-#        iptables -A INPUT -p udp --sport 53 -j ACCEPT
-#        iptables -A OUTPUT -p tcp --dport 53 -j ACCEPT
-#        iptables -A INPUT -p tcp --sport 53 -j ACCEPT
+        # Allow DNS
+        ### In the current case we don't need it
+        #iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+        #iptables -A INPUT -p udp --sport 53 -j ACCEPT
+        #iptables -A OUTPUT -p tcp --dport 53 -j ACCEPT
+        #iptables -A INPUT -p tcp --sport 53 -j ACCEPT
 
+        # Allow ldap. Our ldap listens  to port 390
 #        iptables -A OUTPUT -p udp --dport 390 -j ACCEPT
 #        iptables -A INPUT -p udp --sport 390 -j ACCEPT
         iptables -A OUTPUT -p tcp -d 147.52.78.6 --dport 390 -j ACCEPT
         iptables -A INPUT -p tcp -s 147.52.78.6 --sport 390 -j ACCEPT
-            
+
+        # Allow web traffic from this machine
         iptables -A INPUT -s 147.52.65.68 -p tcp --sport 80 -j ACCEPT
         iptables -A INPUT -s 147.52.65.68 -p tcp --sport 443 -j ACCEPT
         iptables -A OUTPUT -d 147.52.65.68 -p tcp --dport 80 -j ACCEPT
         iptables -A OUTPUT -d 147.52.65.68 -p tcp --dport 443 -j ACCEPT
 
+        # Allow all traffic from/to this machine too
         iptables -A INPUT -s 147.52.67.72 -j ACCEPT
         iptables -A OUTPUT -d 147.52.67.72 -j ACCEPT
 #        iptables -A INPUT -s 147.52.67.72 -p tcp --sport 22 -j ACCEPT
