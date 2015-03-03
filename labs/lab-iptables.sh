@@ -53,16 +53,14 @@ case $1 in
         # Allow all traffic from/to this machine too
         iptables -A INPUT -s 147.52.67.72 -j ACCEPT
         iptables -A OUTPUT -d 147.52.67.72 -j ACCEPT
-#        iptables -A INPUT -s 147.52.67.72 -p tcp --sport 22 -j ACCEPT
-#        iptables -A OUTPUT -d 147.52.67.72 -p tcp --dport 22 -j ACCEPT
-#        iptables -A INPUT -s 147.52.82.71 -j ACCEPT
-#        iptables -A OUTPUT -d 147.52.82.71 -j ACCEPT
+        #iptables -A INPUT -s 147.52.67.72 -p tcp --sport 22 -j ACCEPT
+        #iptables -A OUTPUT -d 147.52.67.72 -p tcp --dport 22 -j ACCEPT
+        #iptables -A INPUT -s 147.52.82.71 -j ACCEPT
+        #iptables -A OUTPUT -d 147.52.82.71 -j ACCEPT
 
-        # 5. Allow incoming SSH only from a sepcific network
-#        iptables -A INPUT -p tcp -s 147.52.67.5 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
-#        iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
-#        iptables -A INPUT -p tcp -s 147.52.67.72 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
-#        iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+        # Allow incoming SSH only from a sepcific host
+        #iptables -A INPUT -p tcp -s 147.52.67.72 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+        #iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 
         ;;
 
