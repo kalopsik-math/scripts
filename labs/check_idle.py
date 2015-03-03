@@ -15,10 +15,10 @@
 import sys
 import subprocess
 
-# Minutes
+# Maximum minutes of no X user activity
 timeout  = 30
 
-# Seconds
+# Seconds before shutdown
 margin   = 300
 
 # Program to run when timeout is reached
@@ -51,13 +51,6 @@ opts.append("-detectsleep")
 commandlist = []
 commandlist.append(xautolock)
 
-# command = xautolock
-# for s in opts:
-#     command = command + s
-#
-# print(command)
-
-#print(subprocess.Popen(command+opts, stdout=subprocess.PIPE).communicate()[0])
 print(commandlist+opts)
 popen = subprocess.Popen(commandlist+opts,
                          stdout=subprocess.PIPE,
