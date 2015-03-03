@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=`date +%Y%m%d%H%M`
-OUTDIR="g100-$DATE-out.d"
+OUTDIR="trasnfer-g100-$DATE-out.d"
 
 FLAG=$1
 
@@ -21,7 +21,5 @@ while (($I<=254)); do
         else
             echo "nothing to do"
         fi
-        echo "===================================================================================" >>$OUTDIR/$I.out 2>&1;
-        echo "===================================================================================" >>$OUTDIR/$I.out 2>&1;
 	((I=$I+1)); 
 done
