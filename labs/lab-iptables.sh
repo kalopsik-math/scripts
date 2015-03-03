@@ -5,6 +5,8 @@ RETVAL=1
 case $1 in
 
     on)
+        # Unmount nfs mounts before dropping by default
+        # otherwise the computer will be deadlocked (or at least very slow)
         umount /home/math/ugrads
         umount /home/tem/ugrads
 
