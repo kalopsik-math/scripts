@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0a08ce2-cc62-4d96-b6be-d27701adc9c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scripts.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="d0a08ce2-cc62-4d96-b6be-d27701adc9c0" name="Default" comment="C">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/misc/bootmail.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/misc/bootmail.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +58,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check_idle.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="check_idle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labs/check_idle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7119675" vertical-offset="1014" max-vertical-offset="1764">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1014" max-vertical-offset="1764">
               <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootmail.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/misc/bootmail.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1425471772948" expanded="true" signature="361:407" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootmail.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/misc/bootmail.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17038539" vertical-offset="0" max-vertical-offset="493">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,12 +117,13 @@
         <option value="$PROJECT_DIR$/labs/ldap-block.conf" />
         <option value="$PROJECT_DIR$/labs/check_idle.py" />
         <option value="$PROJECT_DIR$/labs/my_notifier.py" />
+        <option value="$PROJECT_DIR$/misc/bootmail.sh" />
+        <option value="$PROJECT_DIR$/misc/bootmail.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1440" />
-    <option name="y" value="924" />
+    <option name="y" value="24" />
     <option name="width" value="1440" />
     <option name="height" value="876" />
   </component>
@@ -403,7 +421,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1440" y="924" width="1440" height="876" extended-state="6" />
+    <frame x="0" y="24" width="1440" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -605,8 +623,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/labs/check_idle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7119675" vertical-offset="1014" max-vertical-offset="1764">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1014" max-vertical-offset="1764">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/bootmail.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1425471772948" expanded="true" signature="361:407" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/bootmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17038539" vertical-offset="0" max-vertical-offset="493">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
