@@ -14,7 +14,7 @@ case $1 in
         rm /etc/ldap.conf
         ln -s /etc/ldap-block.conf /etc/ldap.conf
         pam-auth-update --force
-        /etc/init.d/ncsd restart
+        /etc/init.d/nscd restart
         /etc/init.d/nslcd restart
 
         # Default policy for all traffic must be DROP
@@ -45,14 +45,16 @@ case $1 in
         iptables -A INPUT -p tcp -s 147.52.78.6 --sport 390 -j ACCEPT
 
         # Allow web traffic from this machine
-        iptables -A INPUT -s 147.52.65.68 -p tcp --sport 80 -j ACCEPT
-        iptables -A INPUT -s 147.52.65.68 -p tcp --sport 443 -j ACCEPT
-        iptables -A OUTPUT -d 147.52.65.68 -p tcp --dport 80 -j ACCEPT
-        iptables -A OUTPUT -d 147.52.65.68 -p tcp --dport 443 -j ACCEPT
+        #iptables -A INPUT -s 147.52.65.68 -p tcp --sport 80 -j ACCEPT
+        #iptables -A INPUT -s 147.52.65.68 -p tcp --sport 443 -j ACCEPT
+        #iptables -A OUTPUT -d 147.52.65.68 -p tcp --dport 80 -j ACCEPT
+        #iptables -A OUTPUT -d 147.52.65.68 -p tcp --dport 443 -j ACCEPT
 
         # Allow all traffic from/to this machine too
         iptables -A INPUT -s 147.52.67.72 -j ACCEPT
         iptables -A OUTPUT -d 147.52.67.72 -j ACCEPT
+        iptables -A INPUT -s 147.52.65.68 -j ACCEPT
+        iptables -A OUTPUT -d 147.52.65.68 -j ACCEPT
         #iptables -A INPUT -s 147.52.67.72 -p tcp --sport 22 -j ACCEPT
         #iptables -A OUTPUT -d 147.52.67.72 -p tcp --dport 22 -j ACCEPT
         #iptables -A INPUT -s 147.52.82.71 -j ACCEPT
