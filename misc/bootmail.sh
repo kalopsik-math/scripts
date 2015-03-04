@@ -22,10 +22,10 @@ test -x /usr/local/bin/bootmail.py || exit 0
 
 case "$1" in
   start)
-    /usr/local/bin/bootmail.py
+    /usr/local/bin/bootmail.py start
     ;;
   stop)
-    /usr/local/bin/bootmail.py
+    /usr/local/bin/bootmail.py stop
     ;;
   restart)
     ;;
