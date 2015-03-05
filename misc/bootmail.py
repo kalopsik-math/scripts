@@ -46,9 +46,9 @@ msg = MIMEText(message)
 msg['Subject'] = '[g100-boot] %s, %s' % (ss,stag)
 msg['From'] = "g100-boot@math.uoc.gr"
 msg['To'] = "sysadmin@math.uoc.gr"
-msg['Cc'] = "kalopsik@math.uoc.gr kolount@gmail.com"
+#msg['Cc'] = "kalopsik@math.uoc.gr kolount@gmail.com"
 #msg['BCc'] = "kalopsik@gmail.com"
-to = [msg['To']] + msg['Cc'].split()
+to = [msg['To']]# + msg['Cc'].split()
 fr = msg['From']
 s = smtplib.SMTP('mta.uoc.gr')
 s.sendmail(fr, to, msg.as_string())
