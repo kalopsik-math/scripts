@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0a08ce2-cc62-4d96-b6be-d27701adc9c0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/g100.sh" afterPath="$PROJECT_DIR$/labs/g100.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/trasnfer_g100.sh" afterPath="$PROJECT_DIR$/labs/trasnfer_g100.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scripts.iws" />
@@ -38,20 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="g100.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="g100.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/labs/g100.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="819">
+            <state vertical-scroll-proportion="0.0875" vertical-offset="0" max-vertical-offset="819">
               <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trasnfer_g100.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trasnfer_g100.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labs/trasnfer_g100.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0875" vertical-offset="0" max-vertical-offset="651">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
               <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
@@ -493,7 +491,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425541987892</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary=" Added  ip address and the correct email addresses">
+      <created>1425543658006</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1425543658006</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -736,17 +740,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/g100.sh">
+    <entry file="file://$PROJECT_DIR$/labs/trasnfer_g100.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="819">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/trasnfer_g100.sh">
+    <entry file="file://$PROJECT_DIR$/labs/g100.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0875" vertical-offset="0" max-vertical-offset="651">
+        <state vertical-scroll-proportion="0.0875" vertical-offset="0" max-vertical-offset="819">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
