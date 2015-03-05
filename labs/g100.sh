@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATE=`date +%Y%m%d%H%M`
+DATE=`date +%Y%m%d%H%M%S`
 OUTDIR="g100-$DATE-out.d"
 #OF=total_scommand_`date +%Y%m%d%H%M`.out
 #echo "Command: $1" > $OF
