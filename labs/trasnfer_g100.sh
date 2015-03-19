@@ -18,6 +18,9 @@ while (($I<=254)); do
         elif [ $FLAG = 2 ];
         then
 	    scp -o "StrictHostKeyChecking no" $2 root@147.52.58.$I:/root/ >>$OUTDIR/$I.out 2>&1 & 
+        elif [ $FLAG = 3 ];
+        then
+	    scp -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" $2 root@147.52.58.$I:/root/ >>$OUTDIR/$I.out 2>&1 & 
         else
             echo "nothing to do"
         fi
