@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=`date +%Y%m%d%H%M%S`
-OUTDIR="g100-$DATE-out.d"
+OUTDIR="service_tags-$DATE-out.d"
 OUTFILE="service_tags"
 FLAG=$1
 
@@ -10,6 +10,7 @@ FLAG=$1
 while (($I<=254)); do 
     IP="147.52.58.$I"
     COMMAND="echo $IP && dmidecode -s system-serial-number"
+    #COMMAND="dmidecode -s system-serial-number"
     if [ ! -d $OUTDIR ]; then mkdir $OUTDIR; fi
     if [ $FLAG = 1 ];
     then
@@ -17,6 +18,9 @@ while (($I<=254)); do
     elif [ $FLAG = 2 ];
     then
 	    ssh -o "StrictHostKeyChecking no" root@147.52.58.$I "$COMMAND" >>$OUTDIR/$OUTFILE &
+    elif [ $FLAG = 3 ];
+    then
+            ssh -i ~/.ssh/id_rsa-labs-20150319234517 -o "ConnectTimeout 1" -o "StrictHostKeyChecking no" root@147.52.58.$I "$COMMAND" >>$OUTDIR/$OUTFILE  
     else
             echo "nothing to do"
     fi
