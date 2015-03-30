@@ -24,11 +24,13 @@ try:
 
     # Program to run when timeout is reached
     locker   = "/sbin/poweroff"
+    #locker = "/bin/ls"
 
     # Program to run $margin seconds before timeout
-    notifier = "/usr/local/bin/ny_notifier.py"
-    import os
-    if os.path.isfile(notifier):  print("lala")
+    notifier = "/usr/local/bin/my_notifier.py"
+    #notifier = "./my_notifier.py"
+    #import os
+    #if os.path.isfile(notifier):  print("lala")
 
     logfile = "/var/log/check_idle.log"
     log = open(logfile,"a")
@@ -39,10 +41,14 @@ try:
     opts = []
     opts.append("-time")
     opts.append("%d" %timeout)
-    opts.append("-notify")
-    opts.append("%d" % margin)
-    opts.append("-notifier")
-    opts.append("%s " % notifier)
+
+    import os
+    if os.path.isfile(notifier):
+        opts.append("-notify")
+        opts.append("%d" % margin)
+        opts.append("-notifier")
+        opts.append("%s " % notifier)
+
     opts.append("-locker")
     opts.append("%s" % locker)
     opts.append("-secure")
@@ -51,7 +57,7 @@ try:
     commandlist = []
     commandlist.append(xautolock)
 
-    log.write("Executing: %s" % "",join(commandlist+opts))
+    log.write("Executing: %s" % "".join(commandlist+opts))
     popen = subprocess.Popen(commandlist+opts,
                              stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE)
