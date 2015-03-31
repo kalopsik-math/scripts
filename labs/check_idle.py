@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 # This program is intended to run in a cron schedule.
 # If there is no action from user within 30mins the computer powers off.
@@ -48,7 +48,8 @@ try:
         opts.append("%d" % margin)
         opts.append("-notifier")
         opts.append("%s " % notifier)
-
+    else:
+        log.write("Warning! Notifier (/usr/local/bin/my_notifier.py) not found.\n")
     opts.append("-locker")
     opts.append("%s" % locker)
     opts.append("-secure")
@@ -57,14 +58,14 @@ try:
     commandlist = []
     commandlist.append(xautolock)
 
-    log.write("Executing: %s" % "".join(commandlist+opts))
+    log.write("Executing: %s\n" % "".join(commandlist+opts))
     popen = subprocess.Popen(commandlist+opts,
                              stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE)
 
     stdout,stderr = popen.communicate()
 
-    log.write("%s||%s" % (stdout,stderr))
+    log.write("%s || %s\n" % (stdout,stderr))
     log.close()
     raise()
 
