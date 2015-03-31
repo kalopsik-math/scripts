@@ -58,7 +58,7 @@ try:
     commandlist = []
     commandlist.append(xautolock)
 
-    log.write("Executing: %s\n" % "".join(commandlist+opts))
+    log.write("Executing: %s\n" % " ".join(commandlist+opts))
     popen = subprocess.Popen(commandlist+opts,
                              stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE)
