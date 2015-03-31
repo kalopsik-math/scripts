@@ -1,0 +1,5 @@
+
+### Kill any xautolock process and start.
+#*/30 * * * * root kill `pidof xautolock`; /usr/local/bin/check_idle.py
+@reboot	root	/usr/local/bin/check_idle.py
+

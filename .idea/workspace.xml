@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0a08ce2-cc62-4d96-b6be-d27701adc9c0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/labs/cronline" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/check_idle.py" afterPath="$PROJECT_DIR$/labs/check_idle.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -99,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/labs/check_idle.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.88666666" vertical-offset="1071" max-vertical-offset="2142">
-              <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+              <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
               <folding>
                 <element signature="e#405#415#0" expanded="true" />
               </folding>
@@ -572,7 +573,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427790510563</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary=" Added  ip address and the correct email addresses">
+      <created>1427796544984</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1427796544984</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1090,7 +1097,7 @@
     <entry file="file://$PROJECT_DIR$/labs/check_idle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.88666666" vertical-offset="1071" max-vertical-offset="2142">
-          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
           <folding>
             <element signature="e#405#415#0" expanded="true" />
           </folding>

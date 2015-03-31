@@ -68,7 +68,7 @@ try:
     popen = subprocess.Popen(commandlist+opts,
                              stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE,
-                             env=my_env)
+                             env=my_envo)
 
     stdout,stderr = popen.communicate()
 
