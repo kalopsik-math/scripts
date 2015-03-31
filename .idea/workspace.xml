@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0a08ce2-cc62-4d96-b6be-d27701adc9c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/labs/crontab-labs-20150331141109" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/check_idle.py" afterPath="$PROJECT_DIR$/labs/check_idle.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scripts.iws" />
@@ -585,7 +583,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427800028551</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary=" Added  ip address and the correct email addresses">
+      <created>1427800284915</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1427800284915</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
