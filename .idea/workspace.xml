@@ -61,18 +61,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_service_tags.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/get_service_tags.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="756">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding>
-                <marker date="1426836663883" expanded="true" signature="781:842" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bootmail.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/misc/bootmail.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,8 +98,20 @@
       <file leaf-file-name="check_idle.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/labs/check_idle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8639309" vertical-offset="860" max-vertical-offset="1911">
-              <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.88666666" vertical-offset="1071" max-vertical-offset="2142">
+              <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+              <folding>
+                <element signature="e#405#415#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mydate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/misc/mydate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="273">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -566,7 +566,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427790365733</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary=" Added  ip address and the correct email addresses">
+      <created>1427790510563</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1427790510563</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -745,7 +751,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="651">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
-            <marker date="1426836663883" expanded="true" signature="781:842" placeholder="{...}" />
+            <marker date="1426836663883" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -828,7 +834,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="651">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
-            <marker date="1426836663883" expanded="true" signature="781:842" placeholder="{...}" />
+            <marker date="1426836663883" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -995,19 +1001,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/misc/mydate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="273">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/labs/get_service_tags.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="756">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
-            <marker date="1426836663883" expanded="true" signature="781:842" placeholder="{...}" />
+            <marker date="1426836663883" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1080,11 +1079,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/misc/mydate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="273">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/labs/check_idle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8639309" vertical-offset="860" max-vertical-offset="1911">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-          <folding />
+        <state vertical-scroll-proportion="0.88666666" vertical-offset="1071" max-vertical-offset="2142">
+          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+          <folding>
+            <element signature="e#405#415#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
