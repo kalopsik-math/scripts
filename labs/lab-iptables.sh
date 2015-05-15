@@ -55,8 +55,8 @@ case $1 in
         iptables -A OUTPUT -d 147.52.67.72 -j ACCEPT
         iptables -A INPUT -s 147.52.65.68 -j ACCEPT
         iptables -A OUTPUT -d 147.52.65.68 -j ACCEPT
-        iptables -A INPUT -s 147.52.65.134 -j ACCEPT
-        iptables -A OUTPUT -d 147.52.65.134 -j ACCEPT
+        #iptables -A INPUT -s 147.52.65.134 -j ACCEPT
+        #iptables -A OUTPUT -d 147.52.65.134 -j ACCEPT
         #iptables -A INPUT -s 147.52.67.72 -p tcp --sport 22 -j ACCEPT
         #iptables -A OUTPUT -d 147.52.67.72 -p tcp --dport 22 -j ACCEPT
         #iptables -A INPUT -s 147.52.82.71 -j ACCEPT
