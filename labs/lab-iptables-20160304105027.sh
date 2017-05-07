@@ -60,12 +60,12 @@ case $1 in
 	### epoptes:
         iptables -A INPUT  -s 147.52.82.72  -j ACCEPT
         iptables -A OUTPUT -d 147.52.82.72  -j ACCEPT
-	#### fourier:
-        #iptables -A INPUT  -s 147.52.65.68  -j ACCEPT
-        #iptables -A OUTPUT -d 147.52.65.68  -j ACCEPT
-	#### euler:
-        #iptables -A INPUT  -s 147.52.59.134 -j ACCEPT
-        #iptables -A OUTPUT -d 147.52.59.134 -j ACCEPT
+	### fourier:
+        iptables -A INPUT  -s 147.52.65.68  -j ACCEPT
+        iptables -A OUTPUT -d 147.52.65.68  -j ACCEPT
+	### euler:
+        iptables -A INPUT  -s 147.52.59.134 -j ACCEPT
+        iptables -A OUTPUT -d 147.52.59.134 -j ACCEPT
 	#
         #iptables -A INPUT -s 147.52.65.134 -j ACCEPT
         #iptables -A OUTPUT -d 147.52.65.134 -j ACCEPT
