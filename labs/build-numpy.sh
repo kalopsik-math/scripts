@@ -20,6 +20,7 @@ cd -
 source /opt/NUMPY1/bin/activate
 [ "/opt/NUMPY1/bin/pip" == "`which pip`" ] || exit 1
 #exit 1
+which pip
 pip --no-cache-dir install ipython
 pip --no-cache-dir install numpy
 pip --no-cache-dir install matplotlib
