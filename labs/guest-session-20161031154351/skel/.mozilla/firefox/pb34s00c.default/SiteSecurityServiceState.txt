@@ -1,3 +1,0 @@
-www.google-analytics.com:HSTS	0	17105	1488807381676,1,1
-www.mozilla.org:HSTS	0	17105	1509456980690,1,0
-self-repair.mozilla.org:HSTS	0	17105	1493688987441,1,1

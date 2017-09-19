@@ -24,7 +24,7 @@ while (($I<=254)); do
 	    ssh -o "StrictHostKeyChecking no" root@147.52.58.$I "$COMMAND" >>$OUTDIR/$I.out 2>&1 & 
         elif [ $FLAG = 3 ];
         then
-	    ssh -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" root@147.52.58.$I "$COMMAND" >>$OUTDIR/$I.out 2>&1 & 
+	    ssh -p 4444 -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" root@147.52.58.$I "$COMMAND" >>$OUTDIR/$I.out 2>&1 & 
         else
             echo "nothing to do"
         fi

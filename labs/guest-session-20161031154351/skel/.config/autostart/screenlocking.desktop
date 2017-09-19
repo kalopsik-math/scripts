@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name='Disable screen locking in guest session'
-Type=Application
-Exec=gsettings set org.gnome.desktop.lockdown disable-lock-screen true
