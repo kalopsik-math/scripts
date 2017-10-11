@@ -6,7 +6,7 @@ OUTDIR="trasnfer-g100-$DATE-out.d"
 FLAG=$1
 
 
-((I=4)); 
+((I=5)); 
 while (($I<=254)); do 
 	if [ ! -d $OUTDIR ]; then mkdir $OUTDIR; fi
         echo "===================================================================================" >>$OUTDIR/$I.out 2>&1;
@@ -20,7 +20,7 @@ while (($I<=254)); do
 	    scp -o "StrictHostKeyChecking no" $2 root@147.52.58.$I:/root/ >>$OUTDIR/$I.out 2>&1 & 
         elif [ $FLAG = 3 ];
         then
-	    scp -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" $2 root@147.52.58.$I:/root/ >>$OUTDIR/$I.out 2>&1 & 
+	    scp -P 4444 -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" $2 root@147.52.58.$I:/root/ >>$OUTDIR/$I.out 2>&1 & 
         else
             echo "nothing to do"
         fi

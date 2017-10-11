@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./g100_all.sh '/etc/init.d/lightdm restart'
+./g100_all.sh 'service lightdm restart'

@@ -13,10 +13,10 @@ case $1 in
         # change ldap.conf in
         rm /etc/ldap.conf
         ln -s /etc/ldap-block.conf /etc/ldap.conf
-	export DEBIAN_FRONTEND=none
+	export DEBIAN_FRONTEND=noninteractive
         pam-auth-update --force
-        /etc/init.d/nscd restart
-        /etc/init.d/nslcd restart
+        /etc/init.d/nscd stop
+        /etc/init.d/nslcd stop
 
         # Default policy for all traffic must be DROP
         iptables -P INPUT DROP
@@ -55,44 +55,49 @@ case $1 in
 	### turing:
         iptables -A INPUT  -s 147.52.67.72  -j ACCEPT
         iptables -A OUTPUT -d 147.52.67.72  -j ACCEPT
-	### turing:
+	### ds.uoc.gr:
         iptables -A INPUT  -s 147.52.80.1  -j ACCEPT
         iptables -A OUTPUT -d 147.52.80.1  -j ACCEPT
 	### euclid(courses):
         iptables -A INPUT  -s 147.52.82.50  -j ACCEPT
         iptables -A OUTPUT -d 147.52.82.50  -j ACCEPT
-	### epoptes:
+	### polygon:
+	iptables -A INPUT  -s 147.52.82.72  -p tcp --sport 80 -j REJECT
+	iptables -A INPUT  -s 147.52.82.72  -p tcp --sport 443 -j REJECT
+	iptables -A OUTPUT -d 147.52.82.72  -p tcp --dport 80 -j REJECT
+	iptables -A OUTPUT -d 147.52.82.72  -p tcp --dport 443 -j REJECT
         iptables -A INPUT  -s 147.52.82.72  -j ACCEPT
         iptables -A OUTPUT -d 147.52.82.72  -j ACCEPT
-	### mathjax:
-        iptables -A INPUT  -s 104.25.204.18  -j ACCEPT
-        iptables -A OUTPUT -d 104.25.204.18  -j ACCEPT
-        iptables -A INPUT  -s 104.24.18.65  -j ACCEPT
-        iptables -A OUTPUT -d 104.24.18.65  -j ACCEPT
-        iptables -A INPUT  -s 104.24.19.65  -j ACCEPT
-        iptables -A OUTPUT -d 104.24.19.65  -j ACCEPT
-        iptables -A INPUT  -s 104.19.192.102  -j ACCEPT
-        iptables -A OUTPUT -d 104.19.192.102  -j ACCEPT
-        iptables -A INPUT  -s 104.19.193.102  -j ACCEPT
-        iptables -A OUTPUT -d 104.19.193.102  -j ACCEPT
-        iptables -A INPUT  -s 104.19.194.102  -j ACCEPT
-        iptables -A OUTPUT -d 104.19.194.102  -j ACCEPT
-        iptables -A INPUT  -s 104.19.195.102  -j ACCEPT
-        iptables -A OUTPUT -d 104.19.195.102  -j ACCEPT
-        iptables -A INPUT  -s 104.19.196.102  -j ACCEPT
-        iptables -A OUTPUT -d 104.19.196.102  -j ACCEPT
-	### mathjax:
-        iptables -A INPUT  -s 104.25.205.18  -j ACCEPT
-        iptables -A OUTPUT -d 104.25.205.18  -j ACCEPT
+	
+### 	### mathjax:
+###         iptables -A INPUT  -s 104.25.204.18  -j ACCEPT
+###         iptables -A OUTPUT -d 104.25.204.18  -j ACCEPT
+###         iptables -A INPUT  -s 104.24.18.65  -j ACCEPT
+###         iptables -A OUTPUT -d 104.24.18.65  -j ACCEPT
+###         iptables -A INPUT  -s 104.24.19.65  -j ACCEPT
+###         iptables -A OUTPUT -d 104.24.19.65  -j ACCEPT
+###         iptables -A INPUT  -s 104.19.192.102  -j ACCEPT
+###         iptables -A OUTPUT -d 104.19.192.102  -j ACCEPT
+###         iptables -A INPUT  -s 104.19.193.102  -j ACCEPT
+###         iptables -A OUTPUT -d 104.19.193.102  -j ACCEPT
+###         iptables -A INPUT  -s 104.19.194.102  -j ACCEPT
+###         iptables -A OUTPUT -d 104.19.194.102  -j ACCEPT
+###         iptables -A INPUT  -s 104.19.195.102  -j ACCEPT
+###         iptables -A OUTPUT -d 104.19.195.102  -j ACCEPT
+###         iptables -A INPUT  -s 104.19.196.102  -j ACCEPT
+###         iptables -A OUTPUT -d 104.19.196.102  -j ACCEPT
+### 	### mathjax:
+###         iptables -A INPUT  -s 104.25.205.18  -j ACCEPT
+###         iptables -A OUTPUT -d 104.25.205.18  -j ACCEPT
 	### fourier:
         iptables -A INPUT  -s 147.52.65.68  -j ACCEPT
         iptables -A OUTPUT -d 147.52.65.68  -j ACCEPT
-	### euler:
-        iptables -A INPUT  -s 147.52.59.134 -j ACCEPT
-        iptables -A OUTPUT -d 147.52.59.134 -j ACCEPT
-	### mem331:
-        iptables -A INPUT  -s 147.52.50.215 -j ACCEPT
-        iptables -A OUTPUT -d 147.52.50.215 -j ACCEPT
+###	### euler:
+###        iptables -A INPUT  -s 147.52.59.134 -j ACCEPT
+###        iptables -A OUTPUT -d 147.52.59.134 -j ACCEPT
+###	### mem331:
+###        iptables -A INPUT  -s 147.52.50.215 -j ACCEPT
+###        iptables -A OUTPUT -d 147.52.50.215 -j ACCEPT
 	#### mail:
         #iptables -A INPUT  -s 147.52.82.100 -j ACCEPT
         #iptables -A OUTPUT -d 147.52.82.100 -j ACCEPT
@@ -121,7 +126,7 @@ case $1 in
 
         rm /etc/ldap.conf
         ln -s /etc/ldap-default.conf /etc/ldap.conf
-	export DEBIAN_FRONTEND=none
+	export DEBIAN_FRONTEND=noninteractive
         pam-auth-update --force
         /etc/init.d/nscd restart
         /etc/init.d/nslcd restart

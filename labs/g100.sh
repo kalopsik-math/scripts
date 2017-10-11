@@ -15,7 +15,7 @@ while (($I<=254)); do
 	if [ ! -d $OUTDIR ]; then mkdir $OUTDIR; fi
         echo "===================================================================================" >>$OUTDIR/$I.out 2>&1;
         echo "============================= $DATE ===============================================" >>$OUTDIR/$I.out 2>&1;
-	echo executing on 147.52.58.$I: $COMMAND >>$OUTDIR/$I.out 2>&1;
+	### echo executing on 147.52.58.$I: $COMMAND >>$OUTDIR/$I.out 2>&1;
         if [ $FLAG = 1 ];
         then
 	    ssh -i ~/.ssh/id_rsa-labs-1502040018  -o "StrictHostKeyChecking no" root@147.52.58.$I "$COMMAND" >>$OUTDIR/$I.out 2>&1 & 
@@ -33,4 +33,7 @@ while (($I<=254)); do
 	((I=$I+1)); 
 done
 #done >> $OF 2>&1
+
+[ -h last-output ] && rm last-output
+ln -s $OUTDIR ./last-output
 

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -s http://fourier.math.uoc.gr/~mk/prog1718/files/get-problems | bash
