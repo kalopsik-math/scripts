@@ -1,0 +1,1 @@
+cat /etc/hostname; cat /root/lab-iptables.sh  | grep -i reject | grep -vE '^[[:space:]]*#'

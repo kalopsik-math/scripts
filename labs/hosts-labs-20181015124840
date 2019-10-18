@@ -1,0 +1,27 @@
+127.0.0.1	localhost
+127.0.1.1	TMKEMIMG
+
+
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+147.52.82.71 pythagoras.math.uoc.gr
+147.52.65.68 fourier.math.uoc.gr
+147.52.67.72 turing.math.uoc.gr
+147.52.48.134 tem.uoc.gr
+147.52.48.134 www.tem.uoc.gr
+147.52.48.134 users.tem.uoc.gr
+147.52.82.72 courses.math.uoc.gr
+147.52.82.72 polygon.math.uoc.gr
+104.25.205.18 cdn.mathjax.org
+104.25.204.18 cdn.mathjax.org
+147.52.82.186 elearn.uoc.gr
+104.19.195.151 cdnjs.cloudflare.com
+104.19.196.151 cdnjs.cloudflare.com
+104.19.197.151 cdnjs.cloudflare.com
+104.19.198.151 cdnjs.cloudflare.com
+104.19.199.151 cdnjs.cloudflare.com

@@ -5,10 +5,15 @@ OUTDIR="g100-$DATE-out.d"
 #OF=total_scommand_`date +%Y%m%d%H%M`.out
 #echo "Command: $1" > $OF
 
-#COMMAND="DEBIAN_FRONTEND=noninteractive $2"
-COMMAND="$2"
+COMMAND="DEBIAN_FRONTEND=noninteractive $2"
+#COMMAND="$2"
 FLAG=$1
 
+function get_location ()
+{
+    ssh -p 4444 -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" -o "ConnectTimeout 2" root@$IP
+}
+   
 
 ((I=5)); 
 while (($I<=254)); do 
@@ -25,6 +30,11 @@ while (($I<=254)); do
         elif [ $FLAG = 3 ];
         then
 	    ssh -p 4444 -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" root@147.52.58.$I "$COMMAND" >>$OUTDIR/$I.out 2>&1 & 
+        elif [ $FLAG = 4 ];
+        then
+            echo "147.52.58.$I";
+            ssh -p 4444 -i ~/.ssh/id_rsa-labs-20150319234517 -o "StrictHostKeyChecking no" -o "ConnectTimeout 2" root@147.52.58.$I  "cat /etc/hostname" &
+            echo $LOC | cut -d '-' -f1
         else
             echo "nothing to do"
         fi
